@@ -12,10 +12,19 @@
         margin: 0px;
     }
     
+    @font-face {
+        font-family: "Spongebob";
+        src: url("Spongeboy Me Bob.ttf");
+        } /* css for the spongebob text, not to be used for body copy */
+    
+    h1 {
+        font-family: "Spongebob";
+    }
+
     .header {
         display: flex;
         background-color: var(--bluelight);
-        padding: 30px 30px 30px 30px;
+        padding: 30px;
     }
     
     .logo {
@@ -27,18 +36,58 @@
         justify-content: space-between;
         margin-left: auto;
         gap: 20px;
+
     }
     
     .footer {
         margin-top: auto;
-        padding: 20px 20px 20px 20px;
+        padding: 20px;
         text-align: center;
         background-color: var(--bluelight);
     }
     
     
     /*Home Page*/
-    
+
+    .home-grid {
+        display: grid;
+        grid-template-columns: .5fr .5fr ;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header     header"
+        "about      episodes"
+        "characters ."
+        "footer     footer"
+        ;
+    }
+
+    .home-header {
+        grid-area: header;
+    }
+
+    .home-about {
+        grid-area: about;
+        background-color: var(--yellowlight);
+        border: 2px solid var(--bluedark);
+        margin: 10px;
+    }
+
+    .home-episodes {
+        grid-area: episodes;
+        background-color: var(--yellowlight);
+        border: 2px solid var(--bluedark);
+    }
+
+    .home-characters {
+        grid-area: characters;
+        background-color: var(--yellowlight);
+        border: 2px solid var(--bluedark);
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+
     
     /*About*/
     
@@ -67,6 +116,7 @@
     .episodes_article {
         margin: 0px 75px 40px 75px;
         background-color: var(--bluedark);
+        color: aliceblue;
         padding: 5px 20px 5px 20px;
     }
     

@@ -8,13 +8,13 @@
     
     /* CSS across all webpages*/
     
-   /* .body {
+    .body {
         display: flex;
         margin: 0px;
         padding: 0px;
         max-width: 100vw;
         min-height: 100vh;
-    }*/
+    }
     
     @font-face {
         font-family: "Spongebob";

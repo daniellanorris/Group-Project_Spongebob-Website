@@ -124,6 +124,8 @@
         margin: 20px 20% 0px 20%;
     }
     
+
+    
     /*Characters*/
     .character_container {
         display: grid;
@@ -168,6 +170,8 @@
     .chara_card__img {
         border-top-right-radius: 3px;
         border-top-left-radius: 3px;
+        width: 200px;
+        height: 200px;
     }
 
     .chara_card__text {

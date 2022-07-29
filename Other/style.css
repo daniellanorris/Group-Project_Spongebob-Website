@@ -14,14 +14,14 @@
         padding: 0px;
         max-width: 100vw;
         min-height: 100vh;
-    }
+    } 
     
     @font-face {
         font-family: "Spongebob";
-        src: url("Spongeboy Me Bob.ttf");
+        src: url("../assets/Spongeboy\ Me\ Bob.ttf");
         } /* css for the spongebob text, not to be used for body copy */
     
-    h1 {
+    .h1 {
         font-family: "Spongebob";
         font-size: 50px;
     }
@@ -35,17 +35,12 @@
 
     }
 
-    .h1 {
-        float: right;
-        padding-right: 20px;
-    }
-
     .logo {
         margin: 10px;
         float: inline-start;
     }
     
-    .navbar {
+    .header-navbar {
         display: flex;
         justify-content: space-between;
         margin-left: auto;
@@ -55,8 +50,6 @@
         float: right;
         padding-right: 10px;
     }
-
-
 
     .navbar_link {
         font-size: 1.2rem;
@@ -70,7 +63,7 @@
     }
 
     .navbar_link:hover {
-        color:#ffffff;
+        color:var(--bluelight);
     }
 
     .footer {
@@ -78,35 +71,66 @@
         padding: 20px;
         text-align: center;
         background-color: var(--bluelight);
-        width: 100%;
+        max-width: 100%;
     }
     
     
     /*Home Page*/
 
-    .home-header_navbar {
+    .home-h1 {
+        float: right;
+        padding-right: 20px;
+        font-size: 50px;
+        font-family: "Spongebob";
+    }
+    .home-navbar {
         display: flex;
         flex-direction: column;
         gap: 5px;
         margin: 10px;
         font-family:"Spongebob";
-        grid-area: nav;
         justify-content: start;
         align-content: flex-end;
         float: none;
-        width: 200px;
+        width: 150px;
+        grid-area: nav;
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (min-width: 940px) {
+      .header-navbar {
+          display: none;
+      }
+    }
+
+    @media screen and (max-width: 940px) {
         .home-grid {
+            grid-template-rows: auto;
+            grid-template-columns: 100%;
             grid-template-areas: 
             "header"
-            "nav"
             "jumbo"
             "main"
-            "footer"
+            "footer";
+            display: grid;
+            margin: 0;
         }
-    }
+        .home-navbar {
+            display: none;
+        }
+        .header-navbar, .logo, .home-h1 {
+            float:left;
+        }
+        .home-h1 {
+            padding-left: 20px;
+        }
+        .header-navbar {
+            clear: both;
+        }
+
+     }
+    
+
+@media screen and (min-width: 940px) {
     .home-grid  {
         margin: 0;
         box-sizing: border-box;
@@ -119,31 +143,80 @@
         grid-template-columns: 80% 20% ;
         grid-template-rows: auto;
         grid-template-areas: 
-           "header         header "
-           "jumbo            nav"
-           "main              main "
-           "footer           footer  ";
-      }
+            "header         header "
+            "jumbo            nav"
+            "main              main "
+            "footer           footer  ";
+        }
 
-    .home-main-container {
-        display: grid;
-        grid-area: main;
-        grid-template-columns: 320px 320px 320px;
-        grid-column-gap: 25px;
-        grid-auto-rows: auto;
-        margin-left: 10px;
-        grid-template-areas: 
-        "about     episodes  characters";
-        max-width: 100%;
-
+        .home-main-container {
+            display: grid;
+            grid-area: main;
+            grid-template-columns: 300px 300px 300px;
+            grid-column-gap: 10px;
+            grid-auto-rows: auto;
+            margin-left: 10px;
+            grid-template-areas: 
+            "about     episodes  characters";
+            max-width: 100%;
     }
+}
+
+    @media screen and (max-width: 630px) {
+        .home-main-container {
+            grid-area: main;
+            grid-template-columns: 250px;
+            grid-column-gap: 10px;
+            grid-auto-rows: auto;
+            margin-left: 10px;
+            grid-template-areas: 
+            "about"
+            "episodes"
+            "characters";
+            max-width: 100%;
+            justify-content: center;
+            margin: 0;
+        }
+        .jumbo-img {
+            max-width: 90% ;
+        }
+        .navbar_link {
+            font-size: 1rem;
+
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .navbar_link {
+            padding: 10px;
+        }
+    }
+    @media screen and (max-width: 380px){
+        .navbar_link {
+            font-size: .9rem;
+            padding: 5px;
+        }
+    }
+    @media screen and (max-width:940px) and (min-width: 630px) {
+        .home-main-container {
+            display: grid;
+            grid-area: main;
+            grid-template-columns: 300px 300px;
+            grid-column-gap: 10px;
+            grid-auto-rows: auto;
+            margin-left: 10px;
+            grid-template-areas: 
+            "about     episodes "
+            "characters .";
+            max-width: 100%;
+        }
+    }
+    
     .home-jumbo {
         grid-area: jumbo;
         border-radius: 50px;
         align-content: center;
         justify-content: center;
         display: flex;
-  
     }
 
     .jumbo-img {
@@ -151,8 +224,11 @@
         width: 600px;
         padding: 10px;
     }
-
-
+/** styling for container box for tiles **/
+    .home-shadow {
+        border-radius: 30px;
+        box-shadow: -10px 10px 10px var(--bluelight);
+    }
     .home-about {
         display: flex;
         grid-area: about;
@@ -163,15 +239,12 @@
         padding: 10px;
         align-items: center;
         flex-direction: column;
-        width: 300px;
+        width: 250px;
         font-family: "Spongebob";
         letter-spacing: 2px;
+        color: var(--bluedark);
     }
 
-    .spongebob-about-pic {
-        border-radius: 30px;
-        box-shadow: -10px 13px var(--bluelight);
-    }
 
     .home-episodes {
         display: flex;
@@ -185,7 +258,8 @@
         flex-direction: column;
         font-family: "Spongebob";
         letter-spacing: 2px;
-        width: 300px;
+        width: 250px;
+        color: var(--bluedark);
     }
 
     .home-characters {
@@ -200,12 +274,14 @@
         flex-direction: column;
         font-family: "Spongebob";
         letter-spacing: 2px;
-        width: 300px;
+        width: 250px;
+        color: var(--bluedark);
     }
 
     .home-footer {
         grid-area: footer;
         max-width: 100%;
+        font-family: "Spongebob";
     }
 
 

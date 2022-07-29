@@ -35,11 +35,6 @@
 
     }
 
-    .h1 {
-        float: right;
-        padding-right: 20px;
-    }
-
     .logo {
         margin: 10px;
         float: inline-start;
@@ -55,8 +50,6 @@
         float: right;
         padding-right: 10px;
     }
-
-
 
     .navbar_link {
         font-size: 1.2rem;
@@ -83,6 +76,13 @@
     
     
     /*Home Page*/
+
+    .home-h1 {
+        float: right;
+        padding-right: 20px;
+        font-size: 50px;
+        font-family: "Spongebob";
+    }
     .home-navbar {
         display: flex;
         flex-direction: column;

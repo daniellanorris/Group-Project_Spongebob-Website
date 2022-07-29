@@ -3,7 +3,7 @@
     --yellowdark: rgb(174, 173, 13);
     --bluelight:  rgb(38, 185, 200);
     --bluedark:rgb(4, 87, 160);
-    --white: rgb(255, 255, 255);
+    --white: rgb(255, 255, 255);g
     }
     
     /* CSS across all webpages*/
@@ -414,3 +414,4 @@
     .episodes_article_text{
        
     }
+    

@@ -4,31 +4,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="logo" type="png" href="logo.png">
-    <link rel="Spongebob" type="text/ttf" href="Spongeboy Me Bob.ttf">
+    <link rel="stylesheet" type="text/css" href="../other/style.css">
+    <link rel="logo" type="png" href="../assets/logo.png">
+    <link rel="Spongebob" type="text/ttf" href="../assets/Spongeboy Me Bob.ttf">
 </head>
 <body class="home-grid">
   <header class="home-header header">
-    <a class="home-header_logo logo" href="home.html"> <img src="logo.png" width= 200px height= auto> </a>
+    <a class="home-header_logo logo" href="../html/home.html"> <img src="../assets/logo.png" width= 200px height= auto> </a>
     <h1 class= "h1 home-h1"> Home </h1>
+    <nav class="header-navbar">
+      <a class= "home-navbar_link navbar_link" href="../html/home.html">Home</a>
+      <a class= "home-navbar_link navbar_link" href="../html/about.html">About</a>
+      <a class= "home-navbar_link navbar_link" href="../html/characters.html">Characters</a>
+      <a class= "home-navbar_link navbar_link" href="../html/episodes.html">Episodes</a>
+    </nav>
   </header>
     <div class="home-jumbo jumbotron">
-    <img class="jumbo-img" src="spongebob-jumbo.png" width= 400px height= auto> 
+    <img class="jumbo-img" src="../assets/spongebob-jumbo.png" width= 400px height= auto> 
     </div>
-    <nav class="home-header_navbar navbar">
-        <a class= "home-navbar_link navbar_link" href="home.html">Home</a>
-        <a class= "home-navbar_link navbar_link" href="about.html">About</a>
-        <a class= "home-navbar_link navbar_link" href="characters.html">Characters</a>
-        <a class= "home-navbar_link navbar_link" href="episodes.html">Episodes</a>
-      </nav>
+    <nav class="home-navbar">
+      <a class= "home-navbar_link navbar_link" href="../html/home.html">Home</a>
+      <a class= "home-navbar_link navbar_link" href="../html/about.html">About</a>
+      <a class= "home-navbar_link navbar_link" href="../html/characters.html">Characters</a>
+      <a class= "home-navbar_link navbar_link" href="../html/episodes.html">Episodes</a>
+    </nav>
     <main class="home-main-container">
         <div class="home-about"> About
-            <img class= "spongebob-about-pic"src="spongebob.jpeg" width= 300px height= auto>
+          <a href="../html/about.html"> <img class= "spongebob-about-pic home-shadow" src="../assets/spongebob.jpeg" width=250px height=auto> </a>
         </div>
         <div class="home-episodes"> Episodes 
+          <a href="../html/episodes.html"> <img class="spongebob-episode-pic home-shadow"  src= "../assets/rock bottom.png" width=250px height=auto> </a>
         </div>
         <div class="home-characters"> Characters
+          <a href="../html/characters.html"> <img class="spongebob-characters-pic home-shadow" src= "../assets/spongebob-cast.jpeg"  width=250px height=auto> </a>
         </div>
   </main>
   <footer class="home-footer footer"> Daniella Norris </footer>

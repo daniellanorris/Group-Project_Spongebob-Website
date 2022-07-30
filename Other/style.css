@@ -212,6 +212,8 @@
     /*About*/
 
     .about__header {
+        font-family: "Spongebob";
+        src: url("Spongeboy Me Bob.ttf");
         padding: 20px 0px 20px 0px;
         text-align: center;
         margin: 20px 20% 0px 20%;

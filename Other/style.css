@@ -179,6 +179,15 @@
     }
 }
 
+        .home-pic {
+            transition: width 2s, height 2s;
+        }
+
+        .home-pic:hover {
+            width: 300px;
+            height: auto;
+        }
+
     @media screen and (max-width: 630px) {
         .home-main-container {
             grid-area: main;

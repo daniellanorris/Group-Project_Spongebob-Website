@@ -348,7 +348,14 @@
         margin: 20px 0px 0px 0px;
         font-size: large;
     }
-    
+
+    @media screen and (max-width: 906px) {
+        .about__section, .about__header {
+            display: flex;
+            justify-content: space-around;
+        }
+     }
+
     /*Characters*/
     .character_container {
         display: grid;

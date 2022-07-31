@@ -460,3 +460,18 @@
     .episodes_article_video {
         margin: 25px auto 25px auto;
     }
+
+    .episodes_responsive {
+        overflow: hidden;
+        padding-bottom: 56.25% ;
+        position: relative;
+        height: 0;
+    }
+    
+    .episodes_responsive iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }

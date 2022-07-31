@@ -316,6 +316,13 @@
         text-align: center;
         font-family: "Spongebob";
         font-size: larger;
+        animation: fadeBackground 5s; 
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeBackground {
+        from {background-color: lightcoral;}
+        to {background-color: var(--bluedark);}
     }
 
     .about__article__text {
@@ -341,7 +348,14 @@
         margin: 20px 0px 0px 0px;
         font-size: large;
     }
-    
+
+    @media screen and (max-width: 906px) {
+        .about__section, .about__header {
+            display: flex;
+            justify-content: space-around;
+        }
+     }
+
     /*Characters*/
     .character_container {
         display: grid;

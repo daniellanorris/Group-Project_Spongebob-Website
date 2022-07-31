@@ -83,13 +83,13 @@
     
     /*Home Page*/
 
-    .home-h1 {
+    .index-h1 {
         float: right;
         padding-right: 20px;
         font-size: 50px;
         font-family: "Spongebob";
     }
-    .home-navbar {
+    .index-navbar {
         display: flex;
         flex-direction: column;
         gap: 5px;
@@ -109,7 +109,7 @@
     }
 
     @media screen and (max-width: 940px) {
-        .home-grid {
+        .index-grid {
             grid-template-rows: auto;
             grid-template-columns: 100%;
             grid-template-areas: 
@@ -120,13 +120,13 @@
             display: grid;
             margin: 0;
         }
-        .home-navbar {
+        .index-navbar {
             display: none;
         }
-        .header-navbar, .logo, .home-h1 {
+        .header-navbar, .logo, .index-h1 {
             float:left;
         }
-        .home-h1 {
+        .index-h1 {
             padding-left: 20px;
         }
         .header-navbar {
@@ -137,7 +137,7 @@
     
 
 @media screen and (min-width: 940px) {
-    .home-grid  {
+    .index-grid  {
         margin: 0;
         box-sizing: border-box;
         min-height: 100vh;
@@ -155,7 +155,7 @@
             "footer           footer  ";
         }
 
-        .home-main-container {
+        .index-main-container {
             display: grid;
             grid-area: main;
             grid-template-columns: 300px 300px 300px;
@@ -169,7 +169,7 @@
 }
 
     @media screen and (max-width: 630px) {
-        .home-main-container {
+        .index-main-container {
             grid-area: main;
             grid-template-columns: 250px;
             grid-column-gap: 10px;
@@ -203,7 +203,7 @@
         }
     }
     @media screen and (max-width:940px) and (min-width: 630px) {
-        .home-main-container {
+        .index-main-container {
             display: grid;
             grid-area: main;
             grid-template-columns: 300px 300px;
@@ -217,7 +217,7 @@
         }
     }
     
-    .home-jumbo {
+    .index-jumbo {
         grid-area: jumbo;
         border-radius: 50px;
         align-content: center;
@@ -231,11 +231,11 @@
         padding: 10px;
     }
 /** styling for container box for tiles **/
-    .home-shadow {
+    .index-shadow {
         border-radius: 30px;
         box-shadow: -10px 10px 10px var(--bluelight);
     }
-    .home-about {
+    .index-about {
         display: flex;
         grid-area: about;
         background-color: var(--yellowlight);
@@ -252,7 +252,7 @@
     }
 
 
-    .home-episodes {
+    .index-episodes {
         display: flex;
         grid-area: episodes;
         background-color: var(--yellowlight);
@@ -268,7 +268,7 @@
         color: var(--bluedark);
     }
 
-    .home-characters {
+    .index-characters {
         display: flex;
         grid-area: characters;
         background-color: var(--yellowlight);
@@ -284,7 +284,7 @@
         color: var(--bluedark);
     }
 
-    .home-footer {
+    .index-footer {
         grid-area: footer;
         max-width: 100%;
         font-family: "Spongebob";

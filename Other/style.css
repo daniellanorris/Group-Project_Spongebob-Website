@@ -34,8 +34,6 @@
         margin: 0px;
         background-image: url("https://wallpaperaccess.com/full/791225.png");
         background-size: auto 300px;
-       
-       
 
     }
 
@@ -52,7 +50,6 @@
         gap: 15px;
         margin-left: auto ;
         margin-right: 15px;
-       
     }
 
     .navbar_link {
@@ -119,6 +116,10 @@
             "footer";
             display: grid;
             margin: 0;
+            justify-content: center;
+            align-content: center;
+            justify-content: space-evenly;
+            align-content: space-evenly;
         }
         .index-navbar {
             display: none;
@@ -132,10 +133,17 @@
         .header-navbar {
             clear: both;
         }
+        .index-header {
+            height: 200px;
+        }
 
      }
     
-
+@media screen and (max-width: 393px) {
+    .index-header {
+        height: 300px;
+    }
+}
 @media screen and (min-width: 940px) {
     .index-grid  {
         margin: 0;
@@ -165,31 +173,45 @@
             grid-template-areas: 
             "about     episodes  characters";
             max-width: 100%;
+            justify-content: space-evenly;
+            justify-items: center;
+            align-content: space-evenly;
+            align-items: center;
     }
 }
+
+        .index-pic {
+            transition: width 2s, height 2s;
+        }
+
+        .index-pic:hover {
+            width: 300px;
+            height: auto;
+        }
 
     @media screen and (max-width: 630px) {
         .index-main-container {
             grid-area: main;
             grid-template-columns: 250px;
             grid-column-gap: 10px;
-            grid-auto-rows: auto;
-            margin-left: 10px;
+            grid-template-rows: auto;
+            margin: 0;
             grid-template-areas: 
             "about"
             "episodes"
             "characters";
             max-width: 100%;
-            justify-content: center;
-            margin: 0;
+            justify-self: center
         }
+
         .jumbo-img {
             max-width: 90% ;
+            justify-self: center;
         }
         .navbar_link {
             font-size: 1rem;
-
         }
+        
     }
     @media screen and (max-width: 500px) {
         .navbar_link {
@@ -214,6 +236,13 @@
             "about     episodes "
             "characters .";
             max-width: 100%;
+            justify-content: center;
+        }
+        .index-header_logo {
+            padding-bottom: 5px;
+        }
+        .header-navbar {
+            padding-left: 5px;
         }
     }
     

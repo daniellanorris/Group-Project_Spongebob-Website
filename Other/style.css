@@ -34,9 +34,10 @@
         margin: 0px;
         background-image: url("https://wallpaperaccess.com/full/791225.png");
         background-size: auto 300px;
-       
-       
+    }
 
+    .p {
+        font-family: 'Nunito';
     }
 
     .logo {
@@ -356,62 +357,89 @@
         }
      }
 
+
+
     /*Characters*/
-    .character_container {
+
+    .body-container {
         display: grid;
-        grid-template-areas:
-        "c-header c-header"
-        ". cardcontainer"
-        "c-footer c-footer";
+        grid-template-rows: auto 50px auto 50px auto;
+        grid-template-areas: 
+        "header"
+        "title"
+        "cards"
+        "reference"
+        "footer";
+        row-gap: 50px;
         justify-content: center;
-        column-gap: 15px;
-        row-gap: 35px;
-        grid-template-columns: 300px 1fr;
-        grid-template-rows: 150px 1fr 100px;
     }
 
-    .chara_header {
-        grid-area: c-header;
+    .header {
+        grid-area: header;
+    }
+
+    .chara_card_container {
         display: grid;
+        grid-area: cards;
+        grid-template-columns: repeat(auto-fill, 
+        minmax(400px, 600px));
+        column-gap: 30px;
+        row-gap: 35px;
+        justify-content: center;
+    }
+
+    .chara_title {
+        grid-area: title;
+        font-family: "Spongebob";
+        margin-top: 10px;
         align-items: center;
         justify-items: center;
-    }
-
-    .chara_header__title {
-        font-size: 3rem;
-    }
-
-    .chara_card__container {
-        display: grid;
-        grid-area: cardcontainer;
-        width: 90%;
-        grid-template-columns: repeat(auto-fill, minmax 300px, 1fr);
-        column-gap: 25px;
-        row-gap: 35px;
-        justify-self: center;
-        justify-items: center;
+        text-align: center;
     }
 
     .chara_card {
+        background-color: var(--yellowlight);
+        border: 10px solid var(--bluedark);
+        margin: 10px;
+        border-radius: 40px;
+        padding: 10px;
         width: 300px;
-        border-radius: 3px;
+        height: 400px;
+        letter-spacing: 2px;
+        color: var(--bluedark);
+
     }
 
     .chara_card__img {
-        border-top-right-radius: 3px;
-        border-top-left-radius: 3px;
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        justify-self: center;
+    }
+
+    .chara_name {
+        font-family: "Spongebob";
+        text-align: center;
     }
 
     .chara_card__text {
         padding: 0 12px;
         font-family: 'Nunito';
+        font-size: 16px;
+    }
+
+    .ref {
+        grid-area: reference;
+        font-family: 'Nunito';
         font-size: 20px;
+        margin-top: 10px;
     }
 
     .chara_footer {
+        grid-area: footer;
         align-items: center;
         justify-items: center;
-       text-align: center;
+        text-align: center;
     }
     
     

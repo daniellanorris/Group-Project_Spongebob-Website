@@ -1,4 +1,4 @@
 # Group-Project_Spongebob-Website
 
 /*StyleGuide*/
-![StyleGuide](StyleGuide.png)
+![StyleGuide](../Assets/StyleGuide.png)

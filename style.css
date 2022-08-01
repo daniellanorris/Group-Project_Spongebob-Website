@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: "Spongebob";
-    src: url("../assets/Spongeboy\ Me\ Bob.ttf");
+    src: url("Spongeboy\ Me\ Bob.ttf");
     } /* css for the spongebob text, not to be used for body copy */
 
 .h1 {
@@ -31,7 +31,7 @@
     width: 100%;
     grid-area: header;
     margin: 0px;
-    background-image: url("../assets/wallpaper.jpg");
+    background-image: url("wallpaper.jpg");
     background-size: auto 300px;
 
 }
@@ -71,7 +71,7 @@
     margin-top: auto;
     padding: 20px;
     text-align: center;
-    background-image: url("../assets/wallpaper.jpg");
+    background-image: url("wallpaper.jpg");
     background-size: auto 300px;
     max-width: 100%;
 }
